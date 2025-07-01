@@ -12,7 +12,15 @@ curl -X POST http://localhost:8080/engine-rest/process-definition/key/Process_05
 ## Multitasks Flow - Subscribe the topic with MultiTasksWorker
 ```curl command
 curl -X POST http://localhost:8080/engine-rest/process-definition/key/Process_0horfzd/start -H "Content-Type: application/json" -d '{ "variables": {
-"traceId": { "value": "12345678", "type": "Integer" },
+"traceId": { "value": "12345678", "type": "String" },
 "customerId": { "value": 9999, "type": "Integer" }
+} }'
+```
+
+## Gateway Flow - Subscribe the topic with MultiTasksWorker
+```curl command
+curl -X POST http://localhost:8080/engine-rest/process-definition/key/Process_128oclk/start -H "Content-Type: application/json" -d '{ "variables": {
+"traceId": { "value": "12345678", "type": "String" },
+"flag": { "value": true, "type": "Boolean" }
 } }'
 ```

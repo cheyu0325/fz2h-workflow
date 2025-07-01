@@ -11,24 +11,12 @@
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_0wtycq4" sourceRef="Activity_1x33mdg" targetRef="Event_0ptnim9" />
     <bpmn:serviceTask id="Activity_0m1c6xl" name="Multi Task1" camunda:type="external" camunda:topic="action1" camunda:taskPriority="1">
-      <bpmn:extensionElements>
-        <camunda:inputOutput>
-          <camunda:inputParameter name="customerId" />
-          <camunda:inputParameter name="traceId" />
-          <camunda:outputParameter name="customerId" />
-          <camunda:outputParameter name="traceId" />
-        </camunda:inputOutput>
-      </bpmn:extensionElements>
+      <bpmn:extensionElements />
       <bpmn:incoming>Flow_0tw2qio</bpmn:incoming>
       <bpmn:outgoing>Flow_08hblg6</bpmn:outgoing>
     </bpmn:serviceTask>
     <bpmn:serviceTask id="Activity_1x33mdg" name="Multi Task2" camunda:type="external" camunda:topic="action2" camunda:taskPriority="2">
-      <bpmn:extensionElements>
-        <camunda:inputOutput>
-          <camunda:inputParameter name="customerId" />
-          <camunda:inputParameter name="traceId" />
-        </camunda:inputOutput>
-      </bpmn:extensionElements>
+      <bpmn:extensionElements />
       <bpmn:incoming>Flow_08hblg6</bpmn:incoming>
       <bpmn:outgoing>Flow_0wtycq4</bpmn:outgoing>
     </bpmn:serviceTask>
